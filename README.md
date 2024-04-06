@@ -1,4 +1,4 @@
-Ссылка на сайт: https://vladimirvidiagin.github.io/battle
+Ссылка на сайт: https://vladimirvidiagin.github.io/github-battle/
 
 Стэк: ReactTS, SCSS, Feature-Sliced Design
 
