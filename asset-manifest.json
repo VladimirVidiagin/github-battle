@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/github-battle/static/js/main.3cd00407.js",
+    "static/js/810.11e1b3e0.chunk.js": "/github-battle/static/js/810.11e1b3e0.chunk.js",
+    "static/js/683.d9732730.chunk.js": "/github-battle/static/js/683.d9732730.chunk.js",
+    "static/js/652.4cae8b1f.chunk.js": "/github-battle/static/js/652.4cae8b1f.chunk.js",
+    "index.html": "/github-battle/index.html",
+    "main.3cd00407.js.map": "/github-battle/static/js/main.3cd00407.js.map",
+    "810.11e1b3e0.chunk.js.map": "/github-battle/static/js/810.11e1b3e0.chunk.js.map",
+    "683.d9732730.chunk.js.map": "/github-battle/static/js/683.d9732730.chunk.js.map",
+    "652.4cae8b1f.chunk.js.map": "/github-battle/static/js/652.4cae8b1f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3cd00407.js"
+  ]
+}

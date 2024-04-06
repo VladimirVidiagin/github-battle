@@ -1,0 +1,20 @@
+@import "../src/app/gloabal.styles";
+
+// entities
+
+@import "../src/entities/PlayerInput/playerInput",
+  "../src/entities/Instructions/instructions";
+
+// widgets
+
+@import "../src/widgets/Table/table", "../src/widgets/Nav/nav",
+  "../src/widgets/Card/card";
+
+// shared
+
+@import "../src/shared/Tooltip/tooltip";
+
+// pages
+
+@import "../src/pages/PopularPage/popularPage",
+  "../src/pages/ResultsPage/resultsPage";
