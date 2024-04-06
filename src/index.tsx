@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./widgets/Nav/Nav";
 import Loading from "./shared/Loading/Loading";
 
