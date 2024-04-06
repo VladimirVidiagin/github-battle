@@ -1,0 +1,48 @@
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--color);
+
+  &::placeholder {
+    color: var(--color-muted);
+  }
+
+  &:focus {
+    border-color: var(--color);
+    outline: none;
+  }
+}
+
+.input-row {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  input {
+    flex: 1;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.player-label {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+}

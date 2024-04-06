@@ -1,0 +1,13 @@
+select {
+  background: var(--bg-alt);
+  color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  border: 10px solid var(--bg-alt);
+
+  &:focus {
+    outline: 1px solid var(--border-color);
+  }
+}

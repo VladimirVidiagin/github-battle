@@ -1,0 +1,12 @@
+.nav-link {
+  opacity: 1;
+  transition: color 0.2s ease-in-out;
+
+  &.active {
+    color: var(--accent);
+  }
+
+  &:hover {
+    color: var(--accent);
+  }
+}

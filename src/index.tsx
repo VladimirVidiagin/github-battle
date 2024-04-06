@@ -1,19 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from "react";
+import * as ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "./widgets/Nav/Nav";
+import Loading from "./shared/Loading/Loading";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const ResultsPage = React.lazy(() => import("./pages/ResultsPage/ResultsPage"));
+const PopularPage = React.lazy(() => import("./pages/PopularPage/PopularPage"));
+const BattlePage = React.lazy(() => import("./pages/BattlePage/BattlePage"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App: React.FC = () => {
+  const [theme, setTheme] = useState<string>("light");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  return (
+    <Router>
+      <div className={theme}>
+        <div className="container">
+          <Nav theme={theme} toggleTheme={toggleTheme} />
+          <React.Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<PopularPage />} />
+              <Route path="/battle" element={<BattlePage />} />
+              <Route path="/results" element={<ResultsPage />} />
+            </Routes>
+          </React.Suspense>
+        </div>
+      </div>
+    </Router>
+  );
+};
+const rootElement = document.getElementById("app");
+
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<App />);
+} else {
+  throw new Error("Root element with id 'app' not found");
+}
